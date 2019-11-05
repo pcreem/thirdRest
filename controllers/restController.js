@@ -7,7 +7,7 @@ const User = db.User
 
 const restController = {
   getRestaurants: (req, res) => {
-    return Restaurant.findAll().then(restaurants => {
+    return Restaurant.findAll({ include: [User] }).then(restaurants => {
       return res.render('restaurants', { restaurants: restaurants })
     })
   },

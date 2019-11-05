@@ -14,6 +14,7 @@
   </thead>
   <tbody>
     {{#each restaurants}}
+    {{#ifCond this.UserId ../user.UserId}}
     <tr>
       <th scope="row">{{this.id}}</th>
       <td>{{this.name}}</td>
@@ -33,6 +34,7 @@
         </form>
       </td>
     </tr>
+    {{/ifCond}}
     {{/each}}
   </tbody>
 </table>
