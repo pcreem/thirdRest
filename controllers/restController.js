@@ -10,6 +10,7 @@ const restController = {
     return Restaurant.findAll().then(restaurants => {
       //console.log(restaurants[0])
       res.locals.user = req.user
+      //console.log(res.locals.user)
       return res.render('restaurants', { restaurants: restaurants, user: res.locals.user })
     })
   },
