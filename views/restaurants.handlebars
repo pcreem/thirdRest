@@ -14,8 +14,7 @@
   </thead>
   <tbody>
     {{#each restaurants}}
-    <p>{{locals.user}}</p>
-    {{#ifCond this.UserId this.User.id}}
+    {{#ifCond this.UserId ../user.id}}
     <tr>
       <th scope="row">{{this.id}}</th>
       <td>{{this.name}}</td>
