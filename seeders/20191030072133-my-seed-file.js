@@ -41,7 +41,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 3,
+      userid: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -52,7 +52,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 3,
+      userid: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -63,7 +63,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 3,
+      userid: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -74,7 +74,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 2,
+      userid: 3,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -85,7 +85,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 2,
+      userid: 3,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -96,7 +96,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 2,
+      userid: 3,
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});
