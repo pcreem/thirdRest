@@ -19,6 +19,8 @@ const restController = {
     return res.render('create')
   },
   postRestaurant: (req, res) => {
+    res.locals.user = req.user
+    //console.log(res.locals.user.id)
     if (!req.body.name) {
       req.flash('error_messages', "name didn't exist")
       return res.redirect('back')
@@ -33,10 +35,11 @@ const restController = {
           address: req.body.address,
           opening_hours: req.body.opening_hours,
           description: req.body.description,
+          UserId: res.locals.user.id,
           image: file ? img.data.link : null
         }).then((restaurant) => {
           req.flash('success_messages', 'restaurant was successfully created')
-          return res.redirect('restaurants')
+          return res.redirect('/')
         })
       })
     } else {
@@ -45,11 +48,12 @@ const restController = {
         tel: req.body.tel,
         address: req.body.address,
         opening_hours: req.body.opening_hours,
-        description: req.body.description
+        description: req.body.description,
+        UserId: res.locals.user.id
       })
         .then((restaurant) => {
           req.flash('success_messages', 'restaurant was successfully created')
-          res.redirect('restaurants')
+          res.redirect('/')
         })
     }
   },
@@ -86,7 +90,7 @@ const restController = {
               image: file ? img.data.link : restaurant.image
             }).then((restaurant) => {
               req.flash('success_messages', 'restaurant was successfully to update')
-              res.redirect('restaurants')
+              res.redirect('/')
             })
           })
       })
@@ -102,7 +106,7 @@ const restController = {
             image: restaurant.image
           }).then((restaurant) => {
             req.flash('success_messages', 'restaurant was successfully to update')
-            res.redirect('restaurants')
+            res.redirect('/')
           })
         })
     }
@@ -112,7 +116,7 @@ const restController = {
       .then((restaurant) => {
         restaurant.destroy()
           .then((restaurant) => {
-            res.redirect('restaurants')
+            res.redirect('/')
           })
       })
   }

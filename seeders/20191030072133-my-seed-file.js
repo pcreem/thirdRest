@@ -10,7 +10,6 @@ module.exports = {
       password: bcrypt.hashSync('12345678', bcrypt.genSaltSync(10), null),
       isAdmin: true,
       name: "root",
-      UserId: 1,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -19,7 +18,6 @@ module.exports = {
       password: bcrypt.hashSync('12345678', bcrypt.genSaltSync(10), null),
       isAdmin: false,
       name: "user1",
-      UserId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -28,7 +26,6 @@ module.exports = {
       password: bcrypt.hashSync('12345678', bcrypt.genSaltSync(10), null),
       isAdmin: false,
       name: "user2",
-      UserId: 3,
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});
@@ -41,7 +38,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 2,
+      UserId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -52,7 +49,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 2,
+      UserId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -63,7 +60,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 2,
+      UserId: 2,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -74,7 +71,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 3,
+      UserId: 3,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -85,7 +82,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 3,
+      UserId: 3,
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -96,7 +93,7 @@ module.exports = {
       opening_hours: '08:00',
       image: faker.image.imageUrl(),
       description: faker.lorem.text(),
-      userid: 3,
+      UserId: 3,
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});
